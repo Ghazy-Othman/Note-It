@@ -1,0 +1,190 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/notes:
+    get:
+      summary: 'Get notes'
+      operationId: getNotes
+      description: 'Get all notes for specific user .'
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Notes
+  '/api/notes/{note_id}':
+    get:
+      summary: 'Get specific note'
+      operationId: getSpecificNote
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Notes
+      security: []
+    post:
+      summary: 'Update note'
+      operationId: updateNote
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Notes
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Note title .'
+                  example: 'New Note'
+                content:
+                  type: string
+                  description: 'Note content .'
+                  example: 'Welcome to our app'
+      security: []
+    delete:
+      summary: 'Delete note'
+      operationId: deleteNote
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Notes
+      security: []
+    parameters:
+      -
+        in: path
+        name: note_id
+        description: 'The ID of the note.'
+        example: 16
+        required: true
+        schema:
+          type: integer
+  /api/notes/create:
+    post:
+      summary: 'Make new note'
+      operationId: makeNewNote
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Notes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Note title .'
+                  example: 'New Note'
+                content:
+                  type: string
+                  description: 'Note content .'
+                  example: 'Welcome to our app'
+              required:
+                - title
+                - content
+      security: []
+  /api/users/register:
+    post:
+      summary: 'User Register'
+      operationId: userRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'User name .'
+                  example: Ghazy
+                email:
+                  type: string
+                  description: 'User email .'
+                  example: ghazy@gmail.com
+                password:
+                  type: string
+                  description: 'User password . min:5'
+                  example: '!WT%Bp%2c%G}[%8%v'
+              required:
+                - name
+                - email
+                - password
+      security: []
+  /api/users/login:
+    post:
+      summary: 'User Login'
+      operationId: userLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'User email .'
+                  example: ghazy@gmail.com
+                password:
+                  type: string
+                  description: 'User password .'
+                  example: n;>2oYC
+              required:
+                - email
+                - password
+      security: []
+tags:
+  -
+    name: Notes
+    description: ''
+  -
+    name: User
+    description: ''

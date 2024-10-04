@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">noteit</string>
+
+
+    <!--    Notes    -->
+    <string name="hint_note_title">Add note title</string>
+    <string name="hint_note_content">Add note content</string>
+
+</resources>

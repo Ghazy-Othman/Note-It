@@ -1,0 +1,113 @@
+name: User
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/users/register
+    metadata:
+      groupName: User
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'User Register'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'User name .'
+        required: true
+        example: Ghazy
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      email:
+        name: email
+        description: 'User email .'
+        required: true
+        example: ghazy@gmail.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      password:
+        name: password
+        description: 'User password . min:5'
+        required: true
+        example: '!WT%Bp%2c%G}[%8%v'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: Ghazy
+      email: ghazy@gmail.com
+      password: '!WT%Bp%2c%G}[%8%v'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/users/login
+    metadata:
+      groupName: User
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'User Login'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'User email .'
+        required: true
+        example: ghazy@gmail.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      password:
+        name: password
+        description: 'User password .'
+        required: true
+        example: n;>2oYC
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: ghazy@gmail.com
+      password: n;>2oYC
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
