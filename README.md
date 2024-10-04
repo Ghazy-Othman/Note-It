@@ -11,4 +11,4 @@ Very simple **notes app** developed by `java` and `Laravel` .
 
 ## Feedback
 Your feedback is always welcome and you can give me advice to improve my skills.<br>
-Contact me : ghazy.h.othman@gmail.com
+Contact me : `ghazy.h.othman@gmail.com`
